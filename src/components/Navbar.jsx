@@ -72,7 +72,7 @@ function Navbar({ onSearch, onSortChange }) {
     try {
       const response = await fetch(`https://fakestoreapi.com/products?search=${query}`);
       const data = await response.json();
-      onSearch(data);
+      onSearch(query);
     } catch (error) {
       console.error('Error searching products:', error);
       onSearch([]);
